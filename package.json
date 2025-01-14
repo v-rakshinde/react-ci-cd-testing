@@ -1,6 +1,7 @@
 {
   "name": "react-ci-cd-testing",
   "private": true,
+  "homepage": "https://v-rakshinde.github.io/react-ci-cd-testing.git",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
