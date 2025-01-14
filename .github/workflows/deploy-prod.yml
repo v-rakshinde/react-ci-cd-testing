@@ -1,0 +1,21 @@
+name: Deploy to GitHub Pages - Production
+on:
+    push:
+        branches:
+            prod
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+            - name: Install Node
+              uses: actions/setup-node@v4
+              with:
+                node-version: 18.x
+            - name: Install Dependencies
+              uses: npm install
+            - name: Build Project
+              uses: npm run build
+            - name: Deploy Project
+              uses: npm run deploy:prod
