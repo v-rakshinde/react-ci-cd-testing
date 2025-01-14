@@ -5,8 +5,8 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   base: process.env.NODE_ENV === 'production' 
-    ? '/my-react-app/'  // Production base URL
+    ? '/react-ci-cd-testing/'  // Production base URL
     : process.env.BRANCH_NAME === 'dev' 
-    ? '/my-react-app/dev/'  // Development base URL
-    : '/my-react-app/staging/',  // Staging base URL
+    ? '/react-ci-cd-testing/dev/'  // Development base URL
+    : '/react-ci-cd-testing/staging/',  // Staging base URL
 })
