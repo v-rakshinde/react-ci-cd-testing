@@ -17,5 +17,9 @@ jobs:
               uses: npm install
             - name: Build Project
               uses: npm run build
-            - name: Deploy Project
-              uses: npm run deploy:prod
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                github_token: ${{ secrets.REACT_CI_CD_TOKEN }}
+                publish_dir: ./dist
+                publish_branch: gh-pages

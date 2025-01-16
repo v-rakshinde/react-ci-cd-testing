@@ -18,5 +18,9 @@ jobs:
               run: npm install
             - name: Build Project
               run: npm run build
-            - name: Deploy to GitHub Pages (staging)
-              run: npm run deploy:staging
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                github_token: ${{ secrets.REACT_CI_CD_TOKEN }}
+                publish_dir: ./dist
+                publish_branch: gh-pages
